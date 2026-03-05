@@ -17,6 +17,16 @@ public class PlayerMovement_01: MonoBehaviour
             {
                 vDirection += jumpforce;
             }
+
+            if (CheckRightWall())
+            {
+                vDirection += jumpforce;
+            }
+
+            if (CheckLeftWall())
+            {
+                vDirection += jumpforce;
+            }
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -33,7 +43,27 @@ public class PlayerMovement_01: MonoBehaviour
 
     public bool CheckGround()
     {
-        var rayCastHit = Physics2D.Raycast(transform.position, new Vector2(0, -1), 1.1f, mask);
+        var rayCastHit = Physics2D.Raycast(transform.position, new Vector2(0, -1), 0.6f, mask);
+        if (rayCastHit)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool CheckRightWall()
+    {
+        var rayCastHit = Physics2D.Raycast(transform.position, new Vector2(1, 0), 0.6f, mask);
+        if (rayCastHit)
+        {
+            return true;
+        }
+        return false;
+     }
+
+    public bool CheckLeftWall()
+    {
+        var rayCastHit = Physics2D.Raycast(transform.position, new Vector2(-1, 0), 0.6f, mask);
         if (rayCastHit)
         {
             return true;
