@@ -11,6 +11,16 @@ public class InteractionManager : MonoBehaviour
             {
                 currentInteractable.Interaction();
             }
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                currentInteractable.Interaction();
+            }
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                currentInteractable.Interaction();
+            }
         }
     }
 }
