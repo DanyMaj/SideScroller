@@ -1754,7 +1754,7 @@ Transform:
   m_GameObject: {fileID: 505878880}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.52, y: 2.48, z: 0}
+  m_LocalPosition: {x: 0.52, y: 2.4799995, z: 0}
   m_LocalScale: {x: 0.66563654, y: 1.0334136, z: 0.625}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1936,7 +1936,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 2.48, z: -10}
+  m_LocalPosition: {x: 0.52, y: 2.4799995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4760,10 +4760,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141397172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26cbc7e1235d3644aa828d904f6ce207, type: 3}
+  m_Script: {fileID: 11500000, guid: 70223035ebfd19442a0c8e254c40086f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Elevator
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMouveVercticaleDown
   player: {fileID: 0}
+  ViewCamera: {fileID: 505878882}
   tpTop: 1
   tpDown: 1
   ElevatorA: {fileID: 807138849}
@@ -5566,7 +5567,7 @@ Transform:
   m_GameObject: {fileID: 1579094969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.4, y: 11.64, z: 0}
+  m_LocalPosition: {x: -31.948751, y: 11.640002, z: 0}
   m_LocalScale: {x: 0.64374924, y: 43.755558, z: 1.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6046,7 +6047,7 @@ GameObject:
   - component: {fileID: 1677851309}
   - component: {fileID: 1677851308}
   - component: {fileID: 1677851307}
-  - component: {fileID: 1677851310}
+  - component: {fileID: 1677851311}
   m_Layer: 3
   m_Name: 'ElevatorA_L1_02 '
   m_TagString: Untagged
@@ -6173,7 +6174,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1677851310
+--- !u!114 &1677851311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6182,10 +6183,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1677851306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26cbc7e1235d3644aa828d904f6ce207, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ef21cc4bcec3904ea9c2727a2c14928, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Elevator
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMouveVercticale
   player: {fileID: 0}
+  ViewCamera: {fileID: 505878882}
   tpTop: 1
   tpDown: 0
   ElevatorA: {fileID: 1141397175}
