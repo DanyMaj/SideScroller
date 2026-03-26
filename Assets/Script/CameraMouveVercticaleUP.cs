@@ -18,14 +18,15 @@ public class CameraMouveVercticaleUP : Interactable
                 player.transform.position = ElevatorA.position;
                 ViewCamera.transform.position = ViewCamera.transform.position + new Vector3(0, 12, 0);
             }
-
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                if (tpDown == true)
-                {
-                    player.transform.position = ElevatorC.position;
-                }
-            }
         }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+         {
+            if (tpDown == true)
+            {
+                player.transform.position = ElevatorC.position;
+            }
+         }
+        
     }
 }
