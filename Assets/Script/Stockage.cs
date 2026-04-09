@@ -1,5 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.LowLevel;
+
+[System.Serializable]
+public class Tool1
+{
+    public string name;
+    public bool isValid;
+}
 
 public class Stockage : Interactable
 {
@@ -10,30 +18,35 @@ public class Stockage : Interactable
     public bool CheckEvidence;
     public Evidence playerEvidence;
     public int evidenceNombre;
- 
+    public int openingNumber;
+
+    public List<Tool1> theTool;
+    public int numberTools;
+    [SerializeField]
     public override void Interaction()
     {
-        base.Interaction();
-        if (Input.GetKeyDown(KeyCode.E))
+        foreach (var item in theTool) 
         {
-            if (checkAccreditationCardLvl1 == true)
+            
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                playerTool.AddAccreditationCardLvl1(accreditationCardLvl1);
-                print("Vous Avez Obtenu une carte d'accreditation");
-                CheckEvidence = false;
-            }
+                base.Interaction();
+                openingNumber += 1;
+                print($"{openingNumber}");
 
-            if(CheckEvidence == true)
-            {
-                playerEvidence.AddEvidence(evidenceNombre);
-                print($"Vous Avez Obtenu {evidenceNombre} Informations");
-                CheckEvidence = false;
-            }
-            else
-            {
-                print("Ce Stockage est vide");
+                if (item.isValid == true)
+                {
+                    if (numberTools < 1)
+                    {
+                        numberTools += 1;
+                        print($"Vous Avez Obtenu{item.name}");
+                    }
+                } 
+                if (openingNumber < 1)
+                {
+                    print("Ce Stockage est vide");
+                }
             }
         }
-
     }
 }
