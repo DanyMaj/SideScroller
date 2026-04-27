@@ -21,32 +21,32 @@ public class Stockage : Interactable
     public int openingNumber;
 
     public List<Tool1> theTool;
-    public int numberTools;
+    public int numberTools = 0;
     [SerializeField]
     public override void Interaction()
     {
         foreach (var item in theTool) 
         {
             
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+            
                 base.Interaction();
-                openingNumber += 1;
                 print($"{openingNumber}");
 
                 if (item.isValid == true)
                 {
                     if (numberTools < 1)
                     {
+                        openingNumber += 1;
+
                         numberTools += 1;
                         print($"Vous Avez Obtenu{item.name}");
                     }
                 } 
-                if (openingNumber < 1)
+                if (openingNumber != 1)
                 {
                     print("Ce Stockage est vide");
                 }
-            }
+            
         }
     }
 }

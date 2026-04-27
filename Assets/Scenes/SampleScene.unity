@@ -895,6 +895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stockage (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
+      propertyPath: m_TagString
+      value: stockage
+      objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: player
       value: 
@@ -946,7 +950,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1141607786}
   m_SourcePrefab: {fileID: 100100000, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
 --- !u!1 &158993768
 GameObject:
@@ -5766,6 +5773,24 @@ MonoBehaviour:
   tpDown: 1
   ElevatorA: {fileID: 807138849}
   ElevatorC: {fileID: 1677851309}
+--- !u!1 &1141607781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
+  m_PrefabInstance: {fileID: 123684358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1141607786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141607781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34081a52ba05bb45b82bd987be306e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  player: {fileID: 0}
 --- !u!1 &1182000669
 GameObject:
   m_ObjectHideFlags: 0
@@ -7675,6 +7700,10 @@ PrefabInstance:
     - target: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: m_Name
       value: Stockage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
+      propertyPath: m_TagString
+      value: stockage
       objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: player
