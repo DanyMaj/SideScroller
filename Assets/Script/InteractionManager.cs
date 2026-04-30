@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
-    public Stockage VariableStockage;
+    //public Stockage VariableStockage;
     public Interactable currentInteractable;
     void Update()
     {
@@ -11,6 +11,7 @@ public class InteractionManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && currentInteractable.gameObject.tag == "stockage")
             {
                 Debug.Log("poupette");
+                //VariableStockage.Interaction();
                 currentInteractable.Interaction();
             }
 

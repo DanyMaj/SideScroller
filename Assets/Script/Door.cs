@@ -3,7 +3,7 @@ using UnityEngine.LowLevel;
 
 public class Door : Interactable
 {
-    public Tool tools;
+    public ToolManager tools;
     public BoxCollider2D doorCollider;
 
 

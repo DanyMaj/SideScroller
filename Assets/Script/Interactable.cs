@@ -4,10 +4,17 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public InteractionManager player;
+    private GameObject myGameObject;
     /// <summary>
     /// public GameObject gInteractable;
     /// </summary>
     /// <param name="collision"></param>
+    /// 
+
+    void Start()
+    {
+          myGameObject = this.gameObject;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ///gInteractable = collision.gameObject;
@@ -15,6 +22,7 @@ public class Interactable : MonoBehaviour
         if (player != null)
         {
             player.currentInteractable = this;
+            //player.VariableStockage = myGameObject.GetComponent<Stockage>();
         }
 
     }
