@@ -4,6 +4,6 @@ using UnityEngine;
 public class Tools : ScriptableObject
 {
     public string name;
-    public bool isValid;
+    public bool validRegion;
     public string ID;
 }

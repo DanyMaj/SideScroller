@@ -841,10 +841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85445799891b4d468274282fb8f788e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tool
-  numberScrewdriver: 0
-  screwdriver: 0
-  numberAccreditationCardLvl1: 0
-  AccreditationCardLvl1: 0
 --- !u!1001 &123684358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2347,7 +2343,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 585751748}
-  - {fileID: 538669742}
   - {fileID: 1000933393}
   - {fileID: 57715618}
   - {fileID: 1579094974}
@@ -2360,7 +2355,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505878880}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4401bc79067d580469fcfa41f3a50a4b, type: 3}
   m_Name: 
@@ -2617,12 +2612,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538669741}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.06, y: -11.68, z: 0}
-  m_LocalScale: {x: 0.8408113, y: 19.97478, z: 1.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.40700054, y: 0.04416668, z: 0}
+  m_LocalScale: {x: 0.42040563, y: 0.8322824, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 505878882}
+  m_Father: {fileID: 1000933393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &538669743
 BoxCollider2D:
@@ -3121,7 +3116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -16}
-  m_LocalScale: {x: 0.96766645, y: 1.502321, z: 1.6}
+  m_LocalScale: {x: 1.1684573, y: 1.502321, z: 1.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 505878882}
@@ -5185,7 +5180,8 @@ Transform:
   m_LocalPosition: {x: -1.0000004, y: -10.866001, z: 0}
   m_LocalScale: {x: 2, y: 24, z: 1.6}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 538669742}
   m_Father: {fileID: 505878882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!249 &1000933394

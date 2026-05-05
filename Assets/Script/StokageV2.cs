@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.LowLevel;
 
+
 [System.Serializable]
 public class StokageV2 : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class StokageV2 : MonoBehaviour
         {
             playerIsTrigger = true;
         }
+        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -39,7 +41,7 @@ public class StokageV2 : MonoBehaviour
     {
         if (playerIsTrigger == true)
         {
-            Debug.Log("Je suis l1");
+            //Debug.Log("Je suis l1");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Je suis e");
@@ -50,6 +52,7 @@ public class StokageV2 : MonoBehaviour
 
     private void OpenStockage()
     {
+
         
         if (isOpen == false)
         {
@@ -57,7 +60,7 @@ public class StokageV2 : MonoBehaviour
 
             foreach (var item in theTool)
             {
-                if (item.isValid == true)
+                //if (item.isValid == true)
                 {
                 //    playerToolManager.add(item);
                 }
