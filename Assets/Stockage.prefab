@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1510342272915493812}
   - component: {fileID: 6688231541880889343}
-  - component: {fileID: 8616082730586045218}
   - component: {fileID: 4110416008883921196}
   m_Layer: 0
   m_Name: Stockage
@@ -92,25 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8616082730586045218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061924977492061335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d12c88ea2358cc743affd74c720e415b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Stockage
-  player: {fileID: 0}
-  checkAccreditationCardLvl1: 0
-  playerTool: {fileID: 0}
-  accreditationCardLvl1: 0
-  CheckEvidence: 1
-  playerEvidence: {fileID: 0}
-  evidenceNombre: 2
 --- !u!61 &4110416008883921196
 BoxCollider2D:
   m_ObjectHideFlags: 0

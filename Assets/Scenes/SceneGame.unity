@@ -426,14 +426,13 @@ GameObject:
   - component: {fileID: 112324903}
   - component: {fileID: 112324902}
   - component: {fileID: 112324901}
+  - component: {fileID: 112324913}
   - component: {fileID: 112324906}
   - component: {fileID: 112324907}
   - component: {fileID: 112324910}
   - component: {fileID: 112324908}
   - component: {fileID: 112324909}
-  - component: {fileID: 112324913}
   - component: {fileID: 112324912}
-  - component: {fileID: 112324914}
   - component: {fileID: 112324911}
   m_Layer: 0
   m_Name: Player
@@ -684,6 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   player: {fileID: 0}
+  keyToPress: 
 --- !u!114 &112324910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,40 +839,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 112324900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85445799891b4d468274282fb8f788e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b9145a35e48155419a019e6f0841691, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tool
---- !u!114 &112324914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112324900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b73cf3f862a8b44bad2a9cf2969d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToolsOnPlayer
-  tools:
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
-  - objectName: 
-    valeur: 0
+  m_EditorClassIdentifier: Assembly-CSharp::ToolManager
+  playerToolbox: []
+  maxInventory: 3
 --- !u!1001 &123684358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -936,7 +907,7 @@ PrefabInstance:
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: playerTool
       value: 
-      objectReference: {fileID: 112324913}
+      objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: CheckEvidence
       value: 0
@@ -1570,7 +1541,7 @@ PrefabInstance:
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: playerTool
       value: 
-      objectReference: {fileID: 112324913}
+      objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: CheckEvidence
       value: 0
@@ -1617,7 +1588,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 337056334}
+      addedObject: {fileID: 337056338}
   m_SourcePrefab: {fileID: 100100000, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
 --- !u!1 &285536292
 GameObject:
@@ -1770,6 +1741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Elevator
   player: {fileID: 112324908}
+  keyToPress: 12010000
   tpTop: 0
   tpDown: 1
   ElevatorA: {fileID: 0}
@@ -1779,7 +1751,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6061924977492061335, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
   m_PrefabInstance: {fileID: 281358973}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &337056334
+--- !u!114 &337056338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1788,10 +1760,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 337056333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34081a52ba05bb45b82bd987be306e5, type: 3}
+  m_Script: {fileID: 11500000, guid: d372632e5e2eaf545aa6b24e4ff658b4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  player: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::StokageV2
+  player: {fileID: 112324908}
+  keyToPress: 65000000
+  checkAccreditationCardLvl1: 0
+  playerToolManager: {fileID: 112324913}
+  accreditationCardLvl1: 0
+  CheckEvidence: 1
+  playerEvidence: {fileID: 112324912}
+  evidenceNombre: 2
+  isOpen: 0
+  theTool:
+  - {fileID: 11400000, guid: b684b4218e8ada340a779ab3ffaac929, type: 2}
 --- !u!1 &340911719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,8 +2999,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   player: {fileID: 112324908}
-  tools: {fileID: 112324913}
+  keyToPress: 65000000
+  playerToolsManager: {fileID: 112324913}
   doorCollider: {fileID: 584731800}
+  toolToCheck: {fileID: 11400000, guid: b684b4218e8ada340a779ab3ffaac929, type: 2}
 --- !u!1 &573349568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,6 +3788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Elevator
   player: {fileID: 112324908}
+  keyToPress: 
   tpTop: 1
   tpDown: 0
   ElevatorA: {fileID: 1382591532}
@@ -4352,6 +4337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Elevator
   player: {fileID: 112324908}
+  keyToPress: 
   tpTop: 0
   tpDown: 1
   ElevatorA: {fileID: 0}
@@ -4644,6 +4630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::A
   player: {fileID: 112324908}
+  keyToPress: 11010000
   tpTop: 1
   tpDown: 0
   ElevatorA: {fileID: 285536295}
@@ -5569,7 +5556,7 @@ PrefabInstance:
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: playerTool
       value: 
-      objectReference: {fileID: 112324913}
+      objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: CheckEvidence
       value: 0
@@ -5698,6 +5685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Trap
   player: {fileID: 0}
+  keyToPress: 
   dammage: 12
 --- !u!212 &1036401760
 SpriteRenderer:
@@ -6283,6 +6271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMouveVercticaleDown
   player: {fileID: 112324908}
+  keyToPress: 
   ViewCamera: {fileID: 505878882}
   tpTop: 1
   tpDown: 1
@@ -6306,6 +6295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   player: {fileID: 0}
+  keyToPress: 
 --- !u!114 &1141607791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6318,6 +6308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d372632e5e2eaf545aa6b24e4ff658b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StokageV2
+  player: {fileID: 0}
+  keyToPress: 65000000
   checkAccreditationCardLvl1: 0
   playerToolManager: {fileID: 0}
   accreditationCardLvl1: 0
@@ -6328,7 +6320,6 @@ MonoBehaviour:
   theTool:
   - {fileID: 11400000, guid: b684b4218e8ada340a779ab3ffaac929, type: 2}
   - {fileID: 11400000, guid: b684b4218e8ada340a779ab3ffaac929, type: 2}
-  playerIsTrigger: 0
 --- !u!1 &1182000669
 GameObject:
   m_ObjectHideFlags: 0
@@ -6525,7 +6516,7 @@ PrefabInstance:
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: playerTool
       value: 
-      objectReference: {fileID: 112324913}
+      objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: CheckEvidence
       value: 0
@@ -6910,6 +6901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Elevator
   player: {fileID: 112324908}
+  keyToPress: 
   tpTop: 0
   tpDown: 1
   ElevatorA: {fileID: 0}
@@ -7228,6 +7220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d372632e5e2eaf545aa6b24e4ff658b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StokageV2
+  player: {fileID: 0}
+  keyToPress: 65000000
   checkAccreditationCardLvl1: 1
   playerToolManager: {fileID: 0}
   accreditationCardLvl1: 0
@@ -7245,7 +7239,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f24ad7740a2b54c47b19677e3e61aaa3, type: 2}
   - {fileID: 11400000, guid: 817026968df48b542a00528348194fee, type: 2}
   - {fileID: 11400000, guid: 6e191d21c6f4cbd4a83bfa527127f906, type: 2}
-  playerIsTrigger: 0
 --- !u!1 &1579094969
 GameObject:
   m_ObjectHideFlags: 0
@@ -8087,6 +8080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMouveVercticale
   player: {fileID: 112324908}
+  keyToPress: 
   ViewCamera: {fileID: 505878882}
   tpTop: 1
   tpDown: 0
@@ -9134,7 +9128,7 @@ PrefabInstance:
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: playerTool
       value: 
-      objectReference: {fileID: 112324913}
+      objectReference: {fileID: 0}
     - target: {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
       propertyPath: CheckEvidence
       value: 1
@@ -9143,7 +9137,8 @@ PrefabInstance:
       propertyPath: playerEvidence
       value: 
       objectReference: {fileID: 112324912}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8616082730586045218, guid: 93e93aa0a2c3b324e9ca1dc281da02ed, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

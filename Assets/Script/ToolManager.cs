@@ -6,30 +6,19 @@ using UnityEngine;
 public class ToolManager : MonoBehaviour
 {
     public List<Tools> playerToolbox;
-    public int numberScrewdriver;
-    public int screwdriver;
-    public int numberAccreditationCardLvl1 ;
-    public int AccreditationCardLvl1;
+    public int maxInventory = 3;
 
-    public void AddToolToToolbox()
+    public bool AddToolToToolbox(Tools toolToAdd)
     {
-
+        if(playerToolbox.Count < maxInventory)
+        {
+            playerToolbox.Add(toolToAdd);   
+            return true;
+        }
+        return false;
     }
     public void Inventory()
     {
     }
 
-    public void Addscrewdriver(int screwdriver)
-    {
-        numberScrewdriver += screwdriver;
-    }
-    public void AddAccreditationCardLvl1(int AccreditationCardLvl1)
-    {
-        numberAccreditationCardLvl1 += AccreditationCardLvl1;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

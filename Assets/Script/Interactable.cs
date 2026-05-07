@@ -11,6 +11,8 @@ public class Interactable : MonoBehaviour
     /// <param name="collision"></param>
     /// 
 
+    public KeyCode[] keyToPress = { KeyCode.E };
+
     void Start()
     {
           myGameObject = this.gameObject;
@@ -22,7 +24,6 @@ public class Interactable : MonoBehaviour
         if (player != null)
         {
             player.currentInteractable = this;
-            //player.VariableStockage = myGameObject.GetComponent<Stockage>();
         }
 
     }
@@ -38,7 +39,6 @@ public class Interactable : MonoBehaviour
             }
         }
     }
-
 
     public virtual void Interaction()
     {

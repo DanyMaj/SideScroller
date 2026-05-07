@@ -12,22 +12,15 @@ public class Elevator : Interactable
     public override void Interaction()
     {
         base.Interaction();
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        
+        if (tpTop == true)
         {
-            if (tpTop == true)
-            {
-                player.transform.position = ElevatorA.position;
-            }
+            player.transform.position = ElevatorA.position;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (tpDown == true)
         {
-            if (tpDown == true)
-            {
-                player.transform.position = ElevatorC.position;
-            }
+            player.transform.position = ElevatorC.position;
         }
-
-
     }
 }

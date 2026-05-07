@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Evidence : MonoBehaviour
+public class EvidenceManager : MonoBehaviour
 {
     public int EvidencePoint;
 

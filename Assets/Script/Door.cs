@@ -3,18 +3,19 @@ using UnityEngine.LowLevel;
 
 public class Door : Interactable
 {
-    public ToolManager tools;
+    public ToolManager playerToolsManager;
     public BoxCollider2D doorCollider;
 
 
+    public Tools toolToCheck;
     public override void Interaction()
     {
-        base.Interaction();
-        if (tools.numberAccreditationCardLvl1 > 0)
-        { 
-            tools.AddAccreditationCardLvl1(-1);
+        playerToolsManager = player.GetComponent<ToolManager>();   
+
+        if(playerToolsManager.playerToolbox.Contains(toolToCheck) == true)
+        {
             DoorOpen();
-            print("La Porte Est Ouverte");
+            playerToolsManager.playerToolbox.Remove(toolToCheck);
         }
     }
 
@@ -22,5 +23,6 @@ public class Door : Interactable
     {
         GetComponent<SpriteRenderer>().material.color = new Color(208f, 255f, 179f, 163f);
         doorCollider.enabled = false;
+        print($"Vous avec perdu {toolToCheck}");
     }
 }

@@ -8,33 +8,14 @@ public class InteractionManager : MonoBehaviour
     {
         if (currentInteractable != null)
         {
-            if (Input.GetKeyDown(KeyCode.E) && currentInteractable.gameObject.tag == "stockage")
+            foreach (KeyCode key in currentInteractable.keyToPress)
             {
-                Debug.Log("poupette");
-                //VariableStockage.Interaction();
-                currentInteractable.Interaction();
-            }
-
-
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                currentInteractable.Interaction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                currentInteractable.Interaction();
+                if (Input.GetKeyDown(key))
+                {
+                    currentInteractable.Interaction();
+                }
             }
         }
-    }
-
-    void canInteract(GameObject interactable)
-    {
-        if (Input.GetKeyDown(KeyCode.E) && interactable.tag == "stockage")
-        {
-            currentInteractable.Interaction();
-        }
-
     }
 
 }
