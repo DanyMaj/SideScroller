@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 532d978b461bb6c44a7317954bddb8cd
+guid: ba423edaca14df24d852eab9490e07a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2276972587436012585
-    second: casierHautGaucheOuvert_0
+      213: -5954130330792605102
+    second: CasierOuvert_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casierHautGaucheOuvert_0
+      name: CasierOuvert_0
       rect:
         serializedVersion: 2
         x: 4
         y: 0
-        width: 60
-        height: 64
+        width: 120
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 924fc6d118e699f10800000000000000
-      internalID: 2276972587436012585
+      spriteID: 25a4abea20eae5da0800000000000000
+      internalID: -5954130330792605102
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      casierHautGaucheOuvert_0: 2276972587436012585
+      CasierOuvert_0: -5954130330792605102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

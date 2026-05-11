@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.LowLevel;
 
@@ -11,6 +12,10 @@ public class StokageV2 : Interactable
     public EvidenceManager playerEvidence;
     public int evidenceNombre;
     public bool isOpen;
+    public bool Casier;
+    public Sprite bureauOuvert;
+    public Sprite CasierOuvert;
+    private SpriteRenderer sr;
 
     public List<Tools> theTool;
 
@@ -27,6 +32,19 @@ public class StokageV2 : Interactable
         {
             isOpen = true;
 
+            if (Casier)
+            {
+                //pour le casier
+                sr = GetComponent<SpriteRenderer>();
+                sr.sprite = CasierOuvert;
+            }
+            if (!Casier)
+            {
+                //pour le bureau
+                sr = GetComponent<SpriteRenderer>();
+                sr.sprite = bureauOuvert;
+            }
+
             foreach (var item in theTool)
             {
                 if(playerToolManager.AddToolToToolbox(item))
@@ -38,17 +56,21 @@ public class StokageV2 : Interactable
                 }
                 else
                 {
-
+                    
                 }
             }
+
             if (CheckEvidence) 
             {
                 playerEvidence.AddEvidence(evidenceNombre);
             }
+
         }
+
         else
         {
             print("Ce Stockage est vide");
         }
     }
+
 }

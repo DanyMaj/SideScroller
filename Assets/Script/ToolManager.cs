@@ -6,7 +6,7 @@ using UnityEngine;
 public class ToolManager : MonoBehaviour
 {
     public List<Tools> playerToolbox;
-    public int maxInventory = 3;
+    public int maxInventory = 1;
 
     public bool AddToolToToolbox(Tools toolToAdd)
     {

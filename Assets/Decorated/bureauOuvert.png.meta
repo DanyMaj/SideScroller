@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 148217c1730984c46b707afce307665a
+guid: 1650e99977007f64599320ab8ded6dd3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8140385856016259533
-    second: casierBasGaucheOuvert_0
+      213: -3425225723492297793
+    second: bureauOuvert_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: casierBasGaucheOuvert_0
+      name: bureauOuvert_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 60
-        height: 64
+        width: 94
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 336698d813a870f80800000000000000
-      internalID: -8140385856016259533
+      spriteID: fb316b32a572770d0800000000000000
+      internalID: -3425225723492297793
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      casierBasGaucheOuvert_0: -8140385856016259533
+      bureauOuvert_0: -3425225723492297793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
