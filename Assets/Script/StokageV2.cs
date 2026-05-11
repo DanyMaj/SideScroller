@@ -10,13 +10,12 @@ public class StokageV2 : Interactable
     public ToolManager playerToolManager;
     public bool CheckEvidence;
     public EvidenceManager playerEvidence;
-    public int evidenceNombre;
+    public int evidenceNombre = 1;
     public bool isOpen;
     public bool Casier;
     public Sprite bureauOuvert;
     public Sprite CasierOuvert;
     private SpriteRenderer sr;
-
     public List<Tools> theTool;
 
 
