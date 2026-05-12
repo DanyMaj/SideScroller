@@ -1,19 +1,26 @@
 using UnityEngine;
-using UnityEngine.LowLevel;
 
 public class Medicament : Interactable
 {
     public ToolManager playerMedicamentToolsManager;
-    public BoxCollider2D MedicamentCollider;
-
-
+    public Collider2D MedicamentCollider;
     public Tools toolToCheckMedicament;
+    public MedicamentTexture ActiveTextur;
+    public GameObject Parent;
+    public GameObject GlobalLight;
+    private bool ouvert = false;
+
+    public float dissolveDuration = 2;
+    public float dissolveStrength;
+
     public override void Interaction()
     {
-        playerMedicamentToolsManager = player.GetComponent<ToolManager>();   
+        if (ouvert) return;
+        playerMedicamentToolsManager = player.GetComponent<ToolManager>();
 
-        if(playerMedicamentToolsManager.playerToolbox.Contains(toolToCheckMedicament) == true)
+        if (playerMedicamentToolsManager.playerToolbox.Contains(toolToCheckMedicament))
         {
+            ouvert = true;
             MedicamentIsTrigger();
             playerMedicamentToolsManager.playerToolbox.Remove(toolToCheckMedicament);
         }
@@ -21,7 +28,8 @@ public class Medicament : Interactable
 
     public void MedicamentIsTrigger()
     {
-        GetComponent<SpriteRenderer>().material.color = new Color(208f, 255f, 179f, 163f);
-        print($"Vous avec perdu {toolToCheckMedicament}");
+        ActiveTextur.StartDissolver();
+        GlobalLight.GetComponent<Light>().color = Color.red;
+        Parent .SetActive(true);        
     }
 }
