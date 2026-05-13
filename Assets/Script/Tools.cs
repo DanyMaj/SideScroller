@@ -6,4 +6,5 @@ public class Tools : ScriptableObject
     public string name;
     public bool validRegion;
     public string ID;
+    public GameObject toolsGameObject;
 }

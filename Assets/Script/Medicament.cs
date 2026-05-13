@@ -28,8 +28,9 @@ public class Medicament : Interactable
 
     public void MedicamentIsTrigger()
     {
-        ActiveTextur.StartDissolver(); 
-        Parent .SetActive(true);
-        GlobalLight.GetComponent<Light>().color = Color.red;
+        ActiveTextur.StartDissolver();
+        Parent.SetActive(true);
+        //GlobalLight.GetComponent<Light2D>().color = Color.red;
+        
     }
 }
