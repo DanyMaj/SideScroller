@@ -25,8 +25,8 @@ public class Screwdriver : Interactable
     {
         playerPosition.position = TpScrewdriverPlayer.position;
         cameraView.position = TpScrewdriverCamera.position;
-
-        print($"Vous avec perdu {toolToCheck}");
         cameraView.gameObject.GetComponent<CameraMove>().enabled = false;
+ 
+        print($"Vous avec perdu {toolToCheck}");
     }
 }
