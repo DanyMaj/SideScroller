@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerMovement_01: MonoBehaviour
 {
@@ -29,11 +32,11 @@ public class PlayerMovement_01: MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             hDirection += -1;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             hDirection += 1;
         }
@@ -49,6 +52,7 @@ public class PlayerMovement_01: MonoBehaviour
             return true;
         }
         return false;
+        
     }
 
     public bool CheckRightWall()
@@ -70,5 +74,5 @@ public class PlayerMovement_01: MonoBehaviour
         }
         return false;
     }
-
+    //localSclale
 }
