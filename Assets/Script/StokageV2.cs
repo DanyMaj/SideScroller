@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -6,68 +8,88 @@ using UnityEngine;
 public class StokageV2 : Interactable
 {
     public ToolManager playerToolManager;
-    public bool CheckEvidence;
     public EvidenceManager playerEvidence;
-    public int evidenceNombre = 1;
-    public bool isOpen;
-    public bool Casier;
+    private SpriteRenderer sr;
     public Sprite bureauOuvert;
     public Sprite CasierOuvert;
-    private SpriteRenderer sr;
-    public List<Tools> theTool;
+    public GameObject toolsGameObject;
+    public Transform[] spawnPoints;
+    public Transform centerPoint;
+
+    public Transform[] pathRight;
+    public Transform[] pathLeft;
+
+    public float speed = 5f;
+
+    public bool CheckEvidence;
+    public bool canOpen = true;
+    public bool Casier;
+    public int evidenceNombre = 1;
 
 
     public override void Interaction()
     {
-        playerToolManager = player.GetComponent<ToolManager>();
-        OpenStockage();
+        if (canOpen)
+        {
+            playerToolManager = player.GetComponent<ToolManager>();
+            OpenStockage();
+        }
     }
 
     private void OpenStockage()
-    {
-        if (isOpen == false)
+    {  
+        canOpen = false;
+
+        GameObject instantiated = Instantiate(
+        toolsGameObject,
+        centerPoint.position,
+        Quaternion.identity
+         );
+
+        bool goRight = Random.Range(0, 2) == 0;
+
+        if (goRight)
         {
-            isOpen = true;
-
-            if (Casier)
-            {
-                //pour le casier
-                sr = GetComponent<SpriteRenderer>();
-                sr.sprite = CasierOuvert;
-            }
-            if (!Casier)
-            {
-                //pour le bureau
-                sr = GetComponent<SpriteRenderer>();
-                sr.sprite = bureauOuvert;
-            }
-
-            foreach (var item in theTool)
-            {
-                if(playerToolManager.AddToolToToolbox(item))
-                {
-                    if (item)
-                    {
-                        print($"Vous avec obtenue {item}");
-                    }
-                }
-                else
-                {
-                    
-                }
-            }
-
-            if (CheckEvidence) 
-            {
-                playerEvidence.AddEvidence(evidenceNombre);
-            }
-
+            StartCoroutine(MoveOnPath(instantiated, pathRight));
         }
-
         else
         {
-            print("Ce Stockage est vide");
+            StartCoroutine(MoveOnPath(instantiated, pathLeft));
+        }
+
+        if (Casier)
+        {
+            //pour le casier
+            sr = GetComponent<SpriteRenderer>();
+            sr.sprite = CasierOuvert;
+        }
+        if (!Casier)
+        {
+            //pour le bureau
+            sr = GetComponent<SpriteRenderer>();
+            sr.sprite = bureauOuvert;
+        }
+
+        if (CheckEvidence) 
+        {
+            playerEvidence.AddEvidence(evidenceNombre);
         }
     }
 
+    private IEnumerator MoveOnPath(GameObject obj, Transform[] path)
+    {
+        foreach (Transform point in path)
+        {
+            while (Vector2.Distance(obj.transform.position, point.position) > 0.1f)
+            {
+                obj.transform.position = Vector2.MoveTowards(
+                    obj.transform.position,
+                    point.position,
+                    speed * Time.deltaTime
+                );
+
+                yield return null;
+            }
+        }
+    }
 }

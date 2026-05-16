@@ -10,7 +10,6 @@ public class Dammage : MonoBehaviour
        var player = collision.GetComponent<HealthManager>();
        if (player != null)
         {
-          print("ça marche");
           SceneManager.LoadScene(0);
         }
     }
