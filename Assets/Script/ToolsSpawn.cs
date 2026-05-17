@@ -11,7 +11,7 @@ public class ToolsSpawn : Interactable
         RetrieveTools();
     }
 
-    private void RetrieveTools()
+    public void RetrieveTools()
     {
         foreach (var item in theTool)
         {

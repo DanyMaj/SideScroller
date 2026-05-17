@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 315438648550242538}
   - component: {fileID: 2887844840990252439}
-  - component: {fileID: 1766715026044176742}
+  - component: {fileID: -2404812402885571512}
   - component: {fileID: 364155792609235618}
   - component: {fileID: -761513647342589908}
   m_Layer: 0
-  m_Name: "Sac \xE0 dos_0"
+  m_Name: "Sac \xE0 dos"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2567924792719892142}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.09, y: -0.22, z: 0}
+  m_LocalPosition: {x: -6.0085316, y: -2.4095, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1766715026044176742
+--- !u!114 &-2404812402885571512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,14 +102,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2567924792719892142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82483010f7e015d49b84a4aa20c983b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 42a42bf11da32a449830d741c6e132d6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToolsSpawn
+  m_EditorClassIdentifier: Assembly-CSharp::Backpack
   player: {fileID: 0}
   keyToPress: 65000000
-  toolManagerPlayer: {fileID: 0}
+  toolManager: {fileID: 0}
   theTool:
   - {fileID: 11400000, guid: 745feaff81bbe0f48a26e224e6755b53, type: 2}
+  unePlace: {fileID: 0}
+  troisPlaces: {fileID: 0}
+  haveBackpack: 0
 --- !u!96 &364155792609235618
 TrailRenderer:
   serializedVersion: 3

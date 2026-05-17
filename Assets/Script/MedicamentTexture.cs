@@ -22,7 +22,6 @@ public class MedicamentTexture : MonoBehaviour
 
     public IEnumerator dissolver()
     {
-        print("Enumerator fonctionne");
 
         float elapsedTime = 0;       
 
@@ -36,8 +35,6 @@ public class MedicamentTexture : MonoBehaviour
 
             yield return null;
         }
-
-        print("fin du code");
 
         gameObject.SetActive(false);
     }

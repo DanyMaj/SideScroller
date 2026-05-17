@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - stockage
+  - TroisPlaces
+  - UnePlace
   layers:
   - Default
   - TransparentFX

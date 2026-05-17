@@ -40,6 +40,7 @@ public class StokageV2 : Interactable
     {  
         canOpen = false;
 
+        // Début Ai
         GameObject instantiated = Instantiate(
         toolsGameObject,
         centerPoint.position,
@@ -56,6 +57,7 @@ public class StokageV2 : Interactable
         {
             StartCoroutine(MoveOnPath(instantiated, pathLeft));
         }
+        //Fin Ai
 
         if (Casier)
         {
@@ -87,7 +89,6 @@ public class StokageV2 : Interactable
                     point.position,
                     speed * Time.deltaTime
                 );
-
                 yield return null;
             }
         }
