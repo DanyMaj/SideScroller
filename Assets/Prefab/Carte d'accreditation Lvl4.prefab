@@ -108,8 +108,10 @@ MonoBehaviour:
   player: {fileID: 0}
   keyToPress: 65000000
   toolManagerPlayer: {fileID: 0}
+  toolsObject: {fileID: 0}
+  backpackRef: {fileID: 0}
   theTool:
-  - {fileID: 11400000, guid: b684b4218e8ada340a779ab3ffaac929, type: 2}
+  - {fileID: 11400000, guid: f24ad7740a2b54c47b19677e3e61aaa3, type: 2}
 --- !u!96 &7904657067064865264
 TrailRenderer:
   serializedVersion: 3

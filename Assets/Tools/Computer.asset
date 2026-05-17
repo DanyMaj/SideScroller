@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5dce32715cf7646be65d2ff80c33c5, type: 3}
   m_Name: Computer
   m_EditorClassIdentifier: Assembly-CSharp::Tools
+  toolsGameObject: {fileID: 2758214723866655701, guid: fde7ae2e8b3a45341b4b02825d635284, type: 3}
+  spriteTool: {fileID: 8289266086113045490, guid: d358884a46f402f4d8783155092f0e18, type: 3}
+  validRegion: 0
   name: Computer
-  isValid: 0
   ID: PC1

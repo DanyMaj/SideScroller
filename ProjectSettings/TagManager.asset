@@ -7,6 +7,9 @@ TagManager:
   - stockage
   - TroisPlaces
   - UnePlace
+  - Emplacement1
+  - Emplacement2
+  - Emplacement3
   layers:
   - Default
   - TransparentFX

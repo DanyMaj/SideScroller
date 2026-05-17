@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5dce32715cf7646be65d2ff80c33c5, type: 3}
   m_Name: KeyCard Lvl 4
   m_EditorClassIdentifier: Assembly-CSharp::Tools
+  toolsGameObject: {fileID: 3245426585274186658, guid: 02906ef62bfd14845b9e681c7578a5c8, type: 3}
+  spriteTool: {fileID: -760403363416141970, guid: 14320c979222fdb45992926b5f6ebe48, type: 3}
+  validRegion: 0
   name: KeyCard Lvl 4
-  isValid: 0
   ID: KC4

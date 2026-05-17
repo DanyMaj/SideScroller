@@ -1,25 +1,18 @@
-using System;
 using System.Collections.Generic;
-using UnityEngine;
+
 
 public class Backpack : Interactable
 {
     public ToolManager toolManager;
     public List<Tools> theTool;
     public UiManager UiManager;
-    public bool haveBackpack;
+    public bool haveBackpack = false;
 
     public override void Interaction()
     {
         print(player);
         toolManager = player.GetComponent<ToolManager>();
-        if (toolManager == null)
-        {
-            print("ToolManager introuvable");
-            return;
-        }
         IHaveBackpack();
-
     }
 
     private void IHaveBackpack()

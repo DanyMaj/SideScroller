@@ -699,8 +699,8 @@ GameObject:
   - component: {fileID: 135203050}
   - component: {fileID: 135203049}
   m_Layer: 5
-  m_Name: ImageTool
-  m_TagString: Untagged
+  m_Name: InventairePlace3
+  m_TagString: Emplacement3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3915,8 +3915,8 @@ GameObject:
   - component: {fileID: 575151903}
   - component: {fileID: 575151902}
   m_Layer: 5
-  m_Name: ImageTool
-  m_TagString: Untagged
+  m_Name: InventairePlace2
+  m_TagString: Emplacement2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4596,8 +4596,8 @@ GameObject:
   - component: {fileID: 608974940}
   - component: {fileID: 608974939}
   m_Layer: 5
-  m_Name: ImageTool
-  m_TagString: Untagged
+  m_Name: InventairePlace1
+  m_TagString: Emplacement1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9290,6 +9290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UiManager
   unePlace: {fileID: 1629310985}
   troisPlaces: {fileID: 789152368}
+  enplacement1Debut: {fileID: 1561575351}
+  enplacement1: {fileID: 608974939}
+  enplacement2: {fileID: 575151902}
+  enplacement3: {fileID: 135203049}
 --- !u!224 &1228901675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10710,8 +10714,8 @@ GameObject:
   - component: {fileID: 1561575352}
   - component: {fileID: 1561575351}
   m_Layer: 5
-  m_Name: ImageTool
-  m_TagString: Untagged
+  m_Name: InventaireDeBase
+  m_TagString: Emplacement1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13251,6 +13255,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1799631416}
     m_Modifications:
+    - target: {fileID: 1969581527088197069, guid: 0e55546cadbfc1e4da49e8bd29c6f2bb, type: 3}
+      propertyPath: m_Name
+      value: InventaireDeBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969581527088197069, guid: 0e55546cadbfc1e4da49e8bd29c6f2bb, type: 3}
+      propertyPath: m_TagString
+      value: Emplacement1
+      objectReference: {fileID: 0}
     - target: {fileID: 2861128509094475676, guid: 0e55546cadbfc1e4da49e8bd29c6f2bb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13356,6 +13368,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1799631416}
     m_Modifications:
+    - target: {fileID: 573292095773858949, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
+      propertyPath: m_Name
+      value: InventairePlace2
+      objectReference: {fileID: 0}
+    - target: {fileID: 573292095773858949, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
+      propertyPath: m_TagString
+      value: Emplacement2
+      objectReference: {fileID: 0}
+    - target: {fileID: 825226220384455643, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
+      propertyPath: m_Name
+      value: InventairePlace3
+      objectReference: {fileID: 0}
+    - target: {fileID: 825226220384455643, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
+      propertyPath: m_TagString
+      value: Emplacement3
+      objectReference: {fileID: 0}
     - target: {fileID: 3052788673478705639, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
       propertyPath: m_Name
       value: TroisPlaces
@@ -13367,6 +13395,14 @@ PrefabInstance:
     - target: {fileID: 3052788673478705639, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
       propertyPath: m_TagString
       value: TroisPlaces
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189727899319640346, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
+      propertyPath: m_Name
+      value: InventairePlace1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189727899319640346, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
+      propertyPath: m_TagString
+      value: Emplacement1
       objectReference: {fileID: 0}
     - target: {fileID: 3901507667892422384, guid: 3c2697f2aef0c1c4d82060fe0ee1f2ab, type: 3}
       propertyPath: m_Pivot.x
