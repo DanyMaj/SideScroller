@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [System.Serializable]
@@ -20,6 +21,7 @@ public class ToolsSpawn : Interactable
         {
             if (toolManagerPlayer.playerToolbox.Count >= toolManagerPlayer.maxInventory)
             {
+                
                 print("Inventaire plein");
                 return;
             }
@@ -50,14 +52,17 @@ public class ToolsSpawn : Interactable
                     if (toolManagerPlayer.playerToolbox.Count == 1)
                     {
                         UiManager.instance.enplacement1.sprite = item.spriteTool;
+                        UiManager.instance.enplacement1.color = Color.white;
                     }
                     if (toolManagerPlayer.playerToolbox.Count == 2)
                     {
                         UiManager.instance.enplacement2.sprite = item.spriteTool;
+                        UiManager.instance.enplacement2.color = Color.white;
                     }
                     if (toolManagerPlayer.playerToolbox.Count == 3)
                     {
                         UiManager.instance.enplacement3.sprite = item.spriteTool;
+                        UiManager.instance.enplacement3.color = Color.white;
                     }
                 } 
 
