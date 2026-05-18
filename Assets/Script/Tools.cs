@@ -1,4 +1,3 @@
-using UnityEditor.U2D;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Tools", order = 1)]

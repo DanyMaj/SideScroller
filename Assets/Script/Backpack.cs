@@ -15,7 +15,7 @@ public class Backpack : Interactable
         IHaveBackpack();
     }
 
-    private void IHaveBackpack()
+    public void IHaveBackpack()
     {
         haveBackpack = true;
 
