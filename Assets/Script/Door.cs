@@ -15,12 +15,12 @@ public class Door : Interactable
         if(playerToolsManager.playerToolbox.Contains(toolToCheck) == true)
         {
             DoorOpen();
-            playerToolsManager.playerToolbox.Remove(toolToCheck);
         }
     }
 
     public void DoorOpen()
     {
+        playerToolsManager.playerToolbox.Remove(toolToCheck);
         GetComponent<SpriteRenderer>().material.color = new Color(208f, 255f, 179f, 163f);
         doorCollider.enabled = false;
         print($"Vous avec perdu {toolToCheck}");

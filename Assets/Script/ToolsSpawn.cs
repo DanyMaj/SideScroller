@@ -6,9 +6,8 @@ public class ToolsSpawn : Interactable
 {
     public ToolManager toolManagerPlayer;
     public Tools toolsObject;
-    public PlayerHaveBacpak backpackPlayerRef;
     public List<Tools> theTool;
-    public bool haveBackpack = false;
+    
     public override void Interaction()
     {
         toolManagerPlayer = player.GetComponent<ToolManager>();
@@ -27,16 +26,17 @@ public class ToolsSpawn : Interactable
 
             if (toolManagerPlayer.AddToolToToolbox(item))
             {
-                //gameObject.SetActive(false);
 
                 print($"Vous avez obtenu {item}");
+                print("l'ID de l'objet est : " + item.ID);
 
                 if (item.ID == "BP1")
                 {
-                    haveBackpack = true;
+                    toolManagerPlayer.haveBackpack = true;
+                    print("Backpack détecté");
                 }
 
-                if (!haveBackpack)
+                if (!toolManagerPlayer.haveBackpack)
                 {
                     if (toolManagerPlayer.playerToolbox.Count == 1)
                     {
@@ -45,27 +45,24 @@ public class ToolsSpawn : Interactable
                     }
                 }
 
-                if (haveBackpack)
+                if (toolManagerPlayer.haveBackpack)
                 {
-                    if (backpackPlayerRef.refToBackpack.haveBackpack)
+                    if (toolManagerPlayer.playerToolbox.Count == 1)
                     {
-                        if (toolManagerPlayer.playerToolbox.Count == 1)
-                        {
-                            UiManager.instance.enplacement1.sprite = item.spriteTool;
-                        }
-                        if (toolManagerPlayer.playerToolbox.Count == 2)
-                        {
-                            UiManager.instance.enplacement2.sprite = item.spriteTool;
-                        }
-                        if (toolManagerPlayer.playerToolbox.Count == 3)
-                        {
-                            UiManager.instance.enplacement3.sprite = item.spriteTool;
-                        }
+                        UiManager.instance.enplacement1.sprite = item.spriteTool;
+                    }
+                    if (toolManagerPlayer.playerToolbox.Count == 2)
+                    {
+                        UiManager.instance.enplacement2.sprite = item.spriteTool;
+                    }
+                    if (toolManagerPlayer.playerToolbox.Count == 3)
+                    {
+                        UiManager.instance.enplacement3.sprite = item.spriteTool;
                     }
                 } 
 
 
-                if (haveBackpack)
+                if (toolManagerPlayer.haveBackpack)
                 {
                     UiManager.instance.unePlace.SetActive(false);
                     UiManager.instance.troisPlaces.SetActive(true);
@@ -78,6 +75,8 @@ public class ToolsSpawn : Interactable
                     UiManager.instance.troisPlaces.SetActive(false);
                     toolManagerPlayer.maxInventory = 1;
                 }
+
+                gameObject.SetActive(false);
             }
         }
     }

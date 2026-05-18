@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315438648550242538}
   - component: {fileID: 2887844840990252439}
-  - component: {fileID: -2404812402885571512}
+  - component: {fileID: -86571990056525445}
   - component: {fileID: 364155792609235618}
   - component: {fileID: -761513647342589908}
   m_Layer: 0
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2404812402885571512
+--- !u!114 &-86571990056525445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,16 +102,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2567924792719892142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a42bf11da32a449830d741c6e132d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 82483010f7e015d49b84a4aa20c983b6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Backpack
+  m_EditorClassIdentifier: Assembly-CSharp::ToolsSpawn
   player: {fileID: 0}
   keyToPress: 65000000
-  toolManager: {fileID: 0}
+  toolManagerPlayer: {fileID: 0}
+  toolsObject: {fileID: 0}
   theTool:
   - {fileID: 11400000, guid: 745feaff81bbe0f48a26e224e6755b53, type: 2}
-  unePlace: {fileID: 0}
-  troisPlaces: {fileID: 0}
   haveBackpack: 0
 --- !u!96 &364155792609235618
 TrailRenderer:
