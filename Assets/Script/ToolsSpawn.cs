@@ -17,11 +17,40 @@ public class ToolsSpawn : Interactable
 
     public void RetrieveTools()
     {
-        foreach (var item in theTool)
+        for (int i = 0; i < theTool.Count; i++)
         {
+            Tools item = theTool[i];
             if (toolManagerPlayer.playerToolbox.Count >= toolManagerPlayer.maxInventory)
             {
-                
+                Tools oldTool = toolManagerPlayer.playerToolbox[toolManagerPlayer.selectedSlot];
+
+                // Le joueur prend le nouvel objet
+                toolManagerPlayer.playerToolbox[toolManagerPlayer.selectedSlot] = item;
+
+                // Le casier récupère l'ancien objet
+                theTool[i] = oldTool;
+
+                // Change le sprite au sol
+                GetComponent<SpriteRenderer>().sprite = oldTool.spriteTool;
+
+                // Met à jour l'objet sélectionné
+                toolManagerPlayer.selectedTool = item;
+
+                if (toolManagerPlayer.selectedSlot == 0)
+                {
+                    UiManager.instance.enplacement1.sprite = item.spriteTool;
+                    UiManager.instance.enplacement1.color = Color.white;
+                }
+                if (toolManagerPlayer.selectedSlot == 1)
+                {
+                    UiManager.instance.enplacement2.sprite = item.spriteTool;
+                    UiManager.instance.enplacement2.color = Color.white;
+                }
+                if (toolManagerPlayer.selectedSlot == 2)
+                {
+                    UiManager.instance.enplacement3.sprite = item.spriteTool;
+                    UiManager.instance.enplacement3.color = Color.white;
+                }
                 print("Inventaire plein");
                 return;
             }
