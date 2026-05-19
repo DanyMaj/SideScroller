@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: -573593515877198635, guid: c593a7185d3e1964ebcbdaecf778b024, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   player: {fileID: 0}
   keyToPress: 65000000
   toolManagerPlayer: {fileID: 0}
+  toolsObject: {fileID: 0}
   theTool:
   - {fileID: 11400000, guid: 817026968df48b542a00528348194fee, type: 2}
 --- !u!96 &2258202962946998199

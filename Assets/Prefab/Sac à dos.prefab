@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: 18380859758289104, guid: 54a0a15e7b8933d4ba4fa4d8794f4aa7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,7 +111,6 @@ MonoBehaviour:
   toolsObject: {fileID: 0}
   theTool:
   - {fileID: 11400000, guid: 745feaff81bbe0f48a26e224e6755b53, type: 2}
-  haveBackpack: 0
 --- !u!96 &364155792609235618
 TrailRenderer:
   serializedVersion: 3

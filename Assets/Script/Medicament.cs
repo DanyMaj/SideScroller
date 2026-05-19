@@ -1,17 +1,19 @@
 using UnityEngine;
+using UnityEngine.Splines.ExtrusionShapes;
+using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 public class Medicament : Interactable
 {
     public ToolManager playerMedicamentToolsManager;
-    public Collider2D MedicamentCollider;
     public Tools toolToCheckMedicament;
     public MedicamentTexture ActiveTextur;
+    public Light2D globalLight;
+    public Collider2D MedicamentCollider;
     public GameObject Parent;
-    public GameObject GlobalLight;
     private bool ouvert = false;
-
-    public float dissolveDuration = 2;
-    public float dissolveStrength;
+    private int slot;
+    public float timer;
 
     public override void Interaction()
     {
@@ -28,9 +30,49 @@ public class Medicament : Interactable
 
     public void MedicamentIsTrigger()
     {
+        if (!playerMedicamentToolsManager.haveBackpack)
+        {
+            if (playerMedicamentToolsManager.playerToolbox.Count == 1)
+            {
+                UiManager.instance.enplacement1Debut.sprite = Square.sprite;
+                UiManager.instance.enplacement1Debut.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
+            }
+        }
+
+        if (playerMedicamentToolsManager.haveBackpack)
+        {
+            slot = playerMedicamentToolsManager.playerToolbox.IndexOf(toolToCheckMedicament);
+
+            if (slot == 0)
+            {
+                UiManager.instance.enplacement1.sprite = Square.sprite;
+                UiManager.instance.enplacement1.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
+            }
+            if (slot == 1)
+            {
+                UiManager.instance.enplacement2.sprite = Square.sprite;
+                UiManager.instance.enplacement2.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
+            }
+            if (slot == 2)
+            {
+                UiManager.instance.enplacement3.sprite = Square.sprite;
+                UiManager.instance.enplacement3.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
+            }
+        }
         ActiveTextur.StartDissolver();
+        StartCoroutine(MedicamentEffect());
+    }
+
+    public IEnumerator MedicamentEffect()
+    {
         Parent.SetActive(true);
-        //GlobalLight.GetComponent<Light2D>().color = Color.red;
-        
+
+        globalLight.color = new Color(72f / 255f, 0f, 0f, 1f);
+
+        yield return new WaitForSeconds(10f);
+
+        Parent.SetActive(false);
+
+        globalLight.color = new Color(75f / 255f, 75f / 255f, 75f / 255f);
     }
 }

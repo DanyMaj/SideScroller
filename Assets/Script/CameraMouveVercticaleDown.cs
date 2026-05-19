@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class CameraMouveVercticaleDown : Interactable
 {
+    public PlayerMovement_01 isPlayer;
     public Transform ViewCamera;
-    public bool tpTop;
-    public bool tpDown;
     public Transform ElevatorA;
     public Transform ElevatorC;
+    public bool tpTop;
+    public bool tpDown;
 
     public override void Interaction()
     {
+        isPlayer = player.GetComponent<PlayerMovement_01>();
+
         base.Interaction();
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
