@@ -4,10 +4,9 @@ using UnityEngine.LowLevel;
 public class Door : Interactable
 {
     public ToolManager playerToolsManager;
+    public Tools toolToCheck;
     public BoxCollider2D doorCollider;
 
-
-    public Tools toolToCheck;
     public override void Interaction()
     {
         playerToolsManager = player.GetComponent<ToolManager>();   
