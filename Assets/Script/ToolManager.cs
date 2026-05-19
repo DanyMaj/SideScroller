@@ -5,6 +5,7 @@ public class ToolManager : MonoBehaviour
 {
     public Tools selectedTool;
     public List<Tools> playerToolbox;
+    public List<Tools> backpackStorage = new List<Tools>();
     public bool haveBackpack;
     public int selectedSlot = 0;
     public int maxInventory = 1;
@@ -20,7 +21,7 @@ public class ToolManager : MonoBehaviour
         {
             playerToolbox.Add(toolToAdd);
 
-            // Sélection automatique du premier item
+            // Sélectionne automatiquement le premier item
             if (playerToolbox.Count == 1)
             {
                 selectedSlot = 0;

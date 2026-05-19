@@ -687,6 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToolManager
   selectedTool: {fileID: 0}
   playerToolbox: []
+  backpackStorage: []
   haveBackpack: 0
   selectedSlot: 0
   maxInventory: 1
@@ -1039,6 +1040,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1777250400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &195059265
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5234755234577248324, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_Name
+      value: Casier (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6100001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943492779876104010, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696704274686897156, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: evidenceNombre
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696704274686897156, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: playerEvidence
+      value: 
+      objectReference: {fileID: 818903505}
+    - target: {fileID: 7696704274686897156, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: toolsGameObject
+      value: 
+      objectReference: {fileID: 2567924792719892142, guid: bd4539cf3076dd1428a0767ffb6ce38f, type: 3}
+    - target: {fileID: 7696704274686897156, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
+      propertyPath: playerToolManager
+      value: 
+      objectReference: {fileID: 112324913}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b16e6aa24b123448abe24e434e38bdb, type: 3}
 --- !u!1 &221948076
 GameObject:
   m_ObjectHideFlags: 0
@@ -14168,5 +14242,6 @@ SceneRoots:
   - {fileID: 408290197}
   - {fileID: 1204970462}
   - {fileID: 1000425062}
+  - {fileID: 195059265}
   - {fileID: 732032828}
   - {fileID: 296653636}

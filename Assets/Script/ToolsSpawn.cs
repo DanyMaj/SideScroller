@@ -22,10 +22,74 @@ public class ToolsSpawn : Interactable
             Tools item = theTool[i];
             if (toolManagerPlayer.playerToolbox.Count >= toolManagerPlayer.maxInventory)
             {
+                if (item.ID == "BP1" && toolManagerPlayer.haveBackpack)
+                {
+                    print("Vous avez déjà un sac à dos");
+                    return;
+                }
                 Tools oldTool = toolManagerPlayer.playerToolbox[toolManagerPlayer.selectedSlot];
+
+                if (oldTool.ID == "BP1")
+                {
+                    toolManagerPlayer.haveBackpack = false;
+
+                    // Sauvegarde des items du sac
+                    toolManagerPlayer.backpackStorage.Clear();
+
+                    if (toolManagerPlayer.playerToolbox.Count > 1)
+                    {
+                        toolManagerPlayer.backpackStorage.Add(toolManagerPlayer.playerToolbox[1]);
+                    }
+
+                    if (toolManagerPlayer.playerToolbox.Count > 2)
+                    {
+                        toolManagerPlayer.backpackStorage.Add(toolManagerPlayer.playerToolbox[2]);
+                    }
+
+                    // Supprime les slots 2 et 3
+                    if (toolManagerPlayer.playerToolbox.Count > 2)
+                    {
+                        toolManagerPlayer.playerToolbox.RemoveAt(2);
+                    }
+
+                    if (toolManagerPlayer.playerToolbox.Count > 1)
+                    {
+                        toolManagerPlayer.playerToolbox.RemoveAt(1);
+                    }
+
+                    toolManagerPlayer.maxInventory = 1;
+
+                    UiManager.instance.unePlace.SetActive(true);
+                    UiManager.instance.troisPlaces.SetActive(false);
+
+                    print("Sac retiré");
+                }
 
                 // Le joueur prend le nouvel objet
                 toolManagerPlayer.playerToolbox[toolManagerPlayer.selectedSlot] = item;
+
+                if (item.ID == "BP1")
+                {
+                    toolManagerPlayer.haveBackpack = true;
+
+                    toolManagerPlayer.maxInventory = 3;
+
+                    UiManager.instance.unePlace.SetActive(false);
+                    UiManager.instance.troisPlaces.SetActive(true);
+
+                    // Restaurer les objets du sac
+                    foreach (Tools storedTool in toolManagerPlayer.backpackStorage)
+                    {
+                        if (toolManagerPlayer.playerToolbox.Count < toolManagerPlayer.maxInventory)
+                        {
+                            toolManagerPlayer.playerToolbox.Add(storedTool);
+                        }
+                    }
+
+                    toolManagerPlayer.backpackStorage.Clear();
+
+                    print("Sac récupéré");
+                }
 
                 // Le casier récupère l'ancien objet
                 theTool[i] = oldTool;
@@ -35,6 +99,15 @@ public class ToolsSpawn : Interactable
 
                 // Met à jour l'objet sélectionné
                 toolManagerPlayer.selectedTool = item;
+
+                if (!toolManagerPlayer.haveBackpack)
+                {
+                    if (toolManagerPlayer.playerToolbox.Count == 1)
+                    {
+                        UiManager.instance.enplacement1Debut.sprite = item.spriteTool;
+                        UiManager.instance.enplacement1Debut.color = Color.white;
+                    }
+                }
 
                 if (toolManagerPlayer.selectedSlot == 0)
                 {
@@ -51,7 +124,12 @@ public class ToolsSpawn : Interactable
                     UiManager.instance.enplacement3.sprite = item.spriteTool;
                     UiManager.instance.enplacement3.color = Color.white;
                 }
-                print("Inventaire plein");
+                return;
+            }
+
+            if (item.ID == "BP1" && toolManagerPlayer.haveBackpack)
+            {
+                print("Vous avez déjà un sac à dos");
                 return;
             }
 
@@ -59,12 +137,26 @@ public class ToolsSpawn : Interactable
             {
 
                 print($"Vous avez obtenu {item}");
-                print("l'ID de l'objet est : " + item.ID);
 
                 if (item.ID == "BP1")
                 {
                     toolManagerPlayer.haveBackpack = true;
-                    print("Backpack détecté");
+
+                    toolManagerPlayer.maxInventory = 3;
+
+                    UiManager.instance.unePlace.SetActive(false);
+                    UiManager.instance.troisPlaces.SetActive(true);
+
+                    // Restaure les anciens objets
+                    foreach (Tools storedTool in toolManagerPlayer.backpackStorage)
+                    {
+                        if (toolManagerPlayer.playerToolbox.Count < toolManagerPlayer.maxInventory)
+                        {
+                            toolManagerPlayer.playerToolbox.Add(storedTool);
+                        }
+                    }
+
+                    toolManagerPlayer.backpackStorage.Clear();
                 }
 
                 if (!toolManagerPlayer.haveBackpack)
