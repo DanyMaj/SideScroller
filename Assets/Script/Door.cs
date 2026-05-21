@@ -6,7 +6,9 @@ public class Door : Interactable
     public ToolManager playerToolsManager;
     public Tools toolToCheck;
     public BoxCollider2D doorCollider;
+    public GameObject door;
     private int slot;
+
 
     public override void Interaction()
     {
@@ -50,7 +52,7 @@ public class Door : Interactable
             }
         }
         playerToolsManager.playerToolbox.Remove(toolToCheck);
-        GetComponent<SpriteRenderer>().material.color = new Color(208f, 255f, 179f, 163f);
+        door.SetActive(false);
         doorCollider.enabled = false;
         print($"Vous avec perdu {toolToCheck}");
     }

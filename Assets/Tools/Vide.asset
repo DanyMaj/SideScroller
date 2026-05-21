@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d5dce32715cf7646be65d2ff80c33c5, type: 3}
-  m_Name: KeyCard Lvl 1
+  m_Name: Vide
   m_EditorClassIdentifier: Assembly-CSharp::Tools
-  toolsGameObject: {fileID: 7918061856872195276, guid: ba78da68254174e49a8fda2e63109481, type: 3}
-  spriteTool: {fileID: -5481192393377779285, guid: 1a529cc1db1b9954fa347f180962e116, type: 3}
+  toolsGameObject: {fileID: 4964676626341541473, guid: 975bbbb1235da644892033a8305a9e4b, type: 3}
+  spriteTool: {fileID: 7482667652216324306, guid: b0aa84a3a11a7da4796b3b1da5b108d0, type: 3}
   validRegion: 0
-  name: KeyCard Lvl 1
-  ID: KC1
+  name: vide
+  ID: vide

@@ -1,11 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraObject : MonoBehaviour
+public class portiqueDeSécurité : MonoBehaviour
 
 {
     public CameraMove mainCamera;
+    public ToolManager playerToolsManager;
+    public List<Tools> toolToCheck;
     public float timer;
-    public bool playerDetected;
+    private bool playerDetected;
     public bool canDetectPlayer = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,8 +20,19 @@ public class CameraObject : MonoBehaviour
             if (canDetectPlayer)
             {
                 canDetectPlayer = false;
-                mainCamera.SpeedScroll *= 3;
-                playerDetected = true;
+
+                foreach (Tools tool in toolToCheck)
+                {
+                    if (playerToolsManager.playerToolbox.Contains(tool))
+                    {
+                        mainCamera.SpeedScroll *= 3;
+                        playerDetected = true;
+
+                        Debug.Log("Objet interdit détecté : " + tool.name);
+
+                        break;
+                    }
+                }
             }
         }
     }

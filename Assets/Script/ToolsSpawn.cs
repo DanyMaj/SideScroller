@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -6,9 +7,10 @@ using UnityEngine;
 public class ToolsSpawn : Interactable
 {
     public ToolManager toolManagerPlayer;
-    public Tools toolsObject;
     public List<Tools> theTool;
-    
+    public CameraObject theCameraObject;
+    public portiqueDeSécurité theSecurityGate;
+
     public override void Interaction()
     {
         toolManagerPlayer = player.GetComponent<ToolManager>();
@@ -127,6 +129,21 @@ public class ToolsSpawn : Interactable
                 return;
             }
 
+            if (toolManagerPlayer.playerToolbox.Count == 0 && item.ID == "PC1" && Input.GetKeyDown(KeyCode.A))
+            {
+                StartCoroutine(DisableDetection());
+            }
+
+            if (toolManagerPlayer.playerToolbox.Count == 1 && item.ID == "PC1" && Input.GetKeyDown(KeyCode.A))
+            {
+                StartCoroutine(DisableDetection());
+            }
+
+            if (toolManagerPlayer.playerToolbox.Count == 2 && item.ID == "PC1" && Input.GetKeyDown(KeyCode.A))
+            {
+                StartCoroutine(DisableDetection());
+            }
+
             if (item.ID == "BP1" && toolManagerPlayer.haveBackpack)
             {
                 print("Vous avez déjà un sac à dos");
@@ -205,5 +222,19 @@ public class ToolsSpawn : Interactable
                 gameObject.SetActive(false);
             }
         }
+    }
+    IEnumerator DisableDetection()
+    {
+        theCameraObject.canDetectPlayer = false;
+        theSecurityGate.canDetectPlayer = false;
+
+        print("Les système de sécurité son désactiver");
+
+        yield return new WaitForSeconds(20f);
+
+        theCameraObject.canDetectPlayer = true;
+        theSecurityGate.canDetectPlayer = true;
+
+        print("Les système de sécurité son réactivée");
     }
 }
