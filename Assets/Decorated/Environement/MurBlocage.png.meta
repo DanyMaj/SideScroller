@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8171cda1bd0b4014fb3f6664d914f964
+guid: 6bf9d1bc6bca18f41b972cd2bb8a3414
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5515598965564687860
-    second: PorteLvl2_0
+      213: -7781800223723461723
+    second: MurBlocage_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PorteLvl2_0
+      name: MurBlocage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 127
+        width: 50
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0a3106b6f7a473b0800000000000000
-      internalID: -5515598965564687860
+      spriteID: 5a368ef1ded710490800000000000000
+      internalID: -7781800223723461723
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PorteLvl2_0: -5515598965564687860
+      MurBlocage_0: -7781800223723461723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

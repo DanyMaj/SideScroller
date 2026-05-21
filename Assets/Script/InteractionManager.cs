@@ -12,7 +12,9 @@ public class InteractionManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(key))
                 {
+                    currentInteractable.Pressed(key);   
                     currentInteractable.Interaction();
+                    currentInteractable?.Pressed(default);   
                 }
             }
         }

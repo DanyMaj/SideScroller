@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
     /// 
 
     public KeyCode[] keyToPress = { KeyCode.E };
-
+    protected KeyCode pressedKc;
     void Start()
     {
           myGameObject = this.gameObject;
@@ -38,6 +38,11 @@ public class Interactable : MonoBehaviour
                 player.currentInteractable = null;
             }
         }
+    }
+
+    public void Pressed(KeyCode kc)
+    {
+        pressedKc = kc;
     }
 
     public virtual void Interaction()

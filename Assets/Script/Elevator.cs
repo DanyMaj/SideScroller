@@ -10,15 +10,16 @@ public class Elevator : Interactable
 
     public override void Interaction()
     {
+
         isPlayer = player.GetComponent<PlayerMovement_01>();
         base.Interaction();
 
-        if (tpTop == true)
+        if (pressedKc == KeyCode.UpArrow && tpTop)
         {
             player.transform.position = ElevatorA.position;
         }
 
-        if (tpDown == true)
+        if (pressedKc == KeyCode.DownArrow && tpDown)
         {
             player.transform.position = ElevatorC.position;
         }
