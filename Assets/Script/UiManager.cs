@@ -12,6 +12,8 @@ public class UiManager : MonoBehaviour
     public Image enplacement2;
     public Image enplacement3;
 
+    public Sprite square;
+
     private void Awake()
     {
         instance = this;

@@ -29,7 +29,7 @@ public class Screwdriver : Interactable
         {
             if (playerScrewdriverManager.playerToolbox.Count == 1)
             {
-                UiManager.instance.enplacement1Debut.sprite = Square.sprite;
+                UiManager.instance.enplacement1Debut.sprite = UiManager.instance.square;
                 UiManager.instance.enplacement1Debut.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
             }
         }
@@ -40,17 +40,17 @@ public class Screwdriver : Interactable
 
             if (slot == 0)
             {
-                UiManager.instance.enplacement1.sprite = Square.sprite;
+                UiManager.instance.enplacement1.sprite = UiManager.instance.square;
                 UiManager.instance.enplacement1.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
             }
             if (slot == 1)
             {
-                UiManager.instance.enplacement2.sprite = Square.sprite;
+                UiManager.instance.enplacement2.sprite = UiManager.instance.square;
                 UiManager.instance.enplacement2.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
             }
             if (slot == 2)
             {
-                UiManager.instance.enplacement3.sprite = Square.sprite;
+                UiManager.instance.enplacement3.sprite = UiManager.instance.square;
                 UiManager.instance.enplacement3.color = new Color(49f / 255f, 72f / 255f, 65f / 255f, 1f);
             }
         }

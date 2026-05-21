@@ -33063,6 +33063,7 @@ MonoBehaviour:
   enplacement1: {fileID: 608974939}
   enplacement2: {fileID: 575151902}
   enplacement3: {fileID: 135203049}
+  square: {fileID: 7482667652216324306, guid: 14226a09bcc90ce499e801cf7725d794, type: 3}
 --- !u!224 &1228901675
 RectTransform:
   m_ObjectHideFlags: 0
