@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vide
   m_EditorClassIdentifier: Assembly-CSharp::Tools
   toolsGameObject: {fileID: 4964676626341541473, guid: 975bbbb1235da644892033a8305a9e4b, type: 3}
-  spriteTool: {fileID: 7482667652216324306, guid: b0aa84a3a11a7da4796b3b1da5b108d0, type: 3}
+  spriteTool: {fileID: 0}
   validRegion: 0
   name: vide
   ID: vide

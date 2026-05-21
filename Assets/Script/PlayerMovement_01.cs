@@ -8,7 +8,9 @@ public class PlayerMovement_01: MonoBehaviour
     public Rigidbody2D rb; //Ne pas oublier d'activer la gravity scale du rigidbody et d'ajouter un collider
     public float speed;
     public float jumpforce;
+    public Animator anime;
     public LayerMask mask; //Quels layer seront affecté par le raycast attention a ne pas ajouter le layer de votre perso sinon le raycast va trouver le perso avant de trouver le sol
+    public SpriteRenderer sr;
 
     void Update()
     {
@@ -35,13 +37,32 @@ public class PlayerMovement_01: MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             hDirection += -1;
+            sr.flipX = false;
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             hDirection += 1;
+            sr.flipX = true;
         }
 
         rb.linearVelocity = new Vector2(hDirection * speed, rb.linearVelocityY + vDirection); //On set up la velocité horizontal 
+        
+        if (rb.linearVelocity.y > 0)
+        {
+            anime.SetBool("jump", true);
+        }
+        else if (rb.linearVelocity.y < 0)
+        {
+            anime.SetBool("jump", false);
+        }
+        if (hDirection != 0)
+        {
+            anime.SetBool("walk", true);
+        }
+        else
+        {
+            anime.SetBool("walk", false);
+        }
     }
 
     public bool CheckGround()
